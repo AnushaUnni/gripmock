@@ -121,7 +121,7 @@ func generateProtoc(param protocParam) {
 	// the latest go-grpc plugin will generate subfolders under $GOPATH/src based on go_package option
 	pbOutput := os.Getenv("GOPATH") + "/src"
 
-	fmt.Println("pbOutput---------- ", pbOutput)
+	fmt.Println("pbOutput----------anusha ", pbOutput)
 	args = append(args, param.protoPath...)
 	fmt.Println("args---------- ", args)
 	args = append(args, "--go_out=plugins=grpc:"+pbOutput)
