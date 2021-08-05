@@ -69,6 +69,8 @@ func main() {
 		log.Fatalf("error marshalling plugin response: %v", err)
 	}
 
+	b, _ := ioutil.ReadFile("server.go")
+	fmt.Println("content of file is-------- ", string(b))
 	// Write the response to stdout, to be picked up by protoc
 	os.Stdout.Write(out)
 }
