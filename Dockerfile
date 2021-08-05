@@ -7,13 +7,13 @@ RUN mkdir /stubs
 RUN apk -U --no-cache add git protobuf
 
 RUN go get -u -v github.com/golang/protobuf/protoc-gen-go \
-	google.golang.org/grpc v1.27.0 \
 	google.golang.org/grpc/reflection \
 	golang.org/x/net/context \
 	github.com/go-chi/chi \
 	github.com/lithammer/fuzzysearch/fuzzy \
 	golang.org/x/tools/imports
 
+RUN go get -u -v google.golang.org/grpc v1.27.0
 RUN go get github.com/markbates/pkger/cmd/pkger
 
 # cloning well-known-types
