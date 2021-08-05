@@ -80,8 +80,10 @@ func main() {
 	signal.Notify(term, syscall.SIGTERM, syscall.SIGKILL, syscall.SIGINT)
 	select {
 	case err := <-runerr:
+		fmt.Println("runerr--------------- ", err)
 		log.Fatal(err)
 	case <-term:
+		fmt.Println("stopping--------------- ")
 		fmt.Println("Stopping gRPC Server")
 		run.Process.Kill()
 	}
