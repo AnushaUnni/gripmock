@@ -5,8 +5,8 @@ import (
 	"log"
 	"time"
 
+	pb "github.com/anushaunni/gripmock/example/well_known_types"
 	"github.com/golang/protobuf/ptypes/empty"
-	pb "github.com/tokopedia/gripmock/example/well_known_types"
 	"google.golang.org/grpc"
 )
 

@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	pb "github.com/tokopedia/gripmock/example/stream"
+	pb "github.com/anushaunni/gripmock/example/stream"
 	"google.golang.org/grpc"
 )
 

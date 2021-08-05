@@ -26,18 +26,18 @@ RUN mv /protobuf-repo/src/ /protobuf/
 
 RUN rm -rf /protobuf-repo
 
-RUN mkdir -p /go/src/github.com/tokopedia/gripmock
+RUN mkdir -p /go/src/github.com/anushaunni/gripmock
 
-COPY . /go/src/github.com/tokopedia/gripmock
+COPY . /go/src/github.com/anushaunni/gripmock
 
-WORKDIR /go/src/github.com/tokopedia/gripmock/protoc-gen-gripmock
+WORKDIR /go/src/github.com/anushaunni/gripmock/protoc-gen-gripmock
 
 RUN pkger
 
 # install generator plugin
 RUN go install -v
 
-WORKDIR /go/src/github.com/tokopedia/gripmock
+WORKDIR /go/src/github.com/anushaunni/gripmock
 
 # install gripmock
 RUN go install -v

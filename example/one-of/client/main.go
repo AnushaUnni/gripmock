@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	oneof "github.com/tokopedia/gripmock/example/one-of"
+	oneof "github.com/anushaunni/gripmock/example/one-of"
 
 	"google.golang.org/grpc"
 )
@@ -26,7 +26,7 @@ func main() {
 	c := oneof.NewGripmockClient(conn)
 
 	// Contact the server and print out its response.
-	name := "tokopedia"
+	name := "anushaunni"
 	if len(os.Args) > 1 {
 		name = os.Args[1]
 	}
