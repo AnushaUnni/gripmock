@@ -7,7 +7,7 @@ RUN mkdir /stubs
 RUN apk -U --no-cache add git protobuf
 
 RUN go get -u -v github.com/golang/protobuf/protoc-gen-go \
-	google.golang.org/grpc \
+	google.golang.org/grpc v1.27.0 \
 	google.golang.org/grpc/reflection \
 	golang.org/x/net/context \
 	github.com/go-chi/chi \
