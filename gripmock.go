@@ -14,6 +14,7 @@ import (
 )
 
 func main() {
+	fmt.Println("in main---------------------------------------------------------------")
 	outputPointer := flag.String("o", "", "directory to output server.go. Default is $GOPATH/src/grpc/")
 	grpcPort := flag.String("grpc-port", "4770", "Port of gRPC tcp server")
 	grpcBindAddr := flag.String("grpc-listen", "", "Adress the gRPC server will bind to. Default to localhost, set to 0.0.0.0 to use from another machine")
