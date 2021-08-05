@@ -27,7 +27,7 @@ func main() {
 	}
 
 	flag.Parse()
-	fmt.Println("Starting GripMock")
+	fmt.Println("Starting GripMock---------------")
 	if os.Getenv("GOPATH") == "" {
 		log.Fatal("$GOPATH is empty")
 	}
@@ -71,6 +71,7 @@ func main() {
 	// build the server
 	//buildServer(output)
 
+	fmt.Println("before grpc server----------------")
 	// and run
 	run, runerr := runGrpcServer(output)
 
@@ -101,6 +102,7 @@ type protocParam struct {
 }
 
 func generateProtoc(param protocParam) {
+	fmt.Println("In generate protoc--------")
 	protodirs := strings.Split(param.protoPath[0], "/")
 	protodir := ""
 	if len(protodirs) > 0 {
@@ -125,6 +127,7 @@ func generateProtoc(param protocParam) {
 	protoc.Stderr = os.Stderr
 	err := protoc.Run()
 	if err != nil {
+		fmt.Println("Fail on protoc------------- ", err)
 		log.Fatal("Fail on protoc ", err)
 	}
 
